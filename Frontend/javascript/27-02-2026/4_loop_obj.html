@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOOPOOS</title>
+    <title>Document</title>
 </head>
-
 <body>
-
     <script>
         const obj1 = {
-            firtsName: "Sai", lastName: "sanket", "kannada marks": 60,
-            marks: 50.90,
+            firstName: "pavan",
+            lastName: "kumar",
+            "kannada marks": 60,
+            marks: 50.80,
             isPass: true,
             isWalking: () => {
                 console.log("yes he is walking");
             },
+            marks1: [20, 40, 50, 60],
             isSleeping: () => {
-                console.log("yes he is sleeping");
+                return "yes he is sleeping";
             },
-            marks1: [20, 60, 80, 90]
         }
 
-        for (let key in obj1) {
-            console.log(`${key}:${obj1[key]}`)
+        for(let key in obj1) {
+            console.log(`${key} : ${obj1[key]}`);
         }
 
+        // console.log(Object.keys(obj1));   //returns array of keys
         const keys = Object.keys(obj1);
         console.log(keys);
-        for (let key of keys) {
-            console.log(`${key}:${obj1[key]}`)
+        for(let key of keys) {
+            console.log(`${key} : ${obj1[key]}`);
         }
-    </script>
-</body>
 
+        </script>
+</body>
 </html>
