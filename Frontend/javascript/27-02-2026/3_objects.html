@@ -13,21 +13,26 @@
 
     <script>
         const obj1 = {
-            firtsName: "Sai", lastName: "sanket", "kannada marks": 60,
-            marks: 50.90,
+            firstName: "pavan",
+            lastName: "kumar",
+            "kannada marks": 60,
+            marks: 50.80,
             isPass: true,
             isWalking: () => {
                 console.log("yes he is walking");
             },
+            marks1: [20, 40, 50, 60],
             isSleeping: () => {
-                console.log("yes he is sleeping");
+                return "yes he is sleeping";
             },
-            marks1: [20, 60, 80, 90]
         }
 
-        console.log("first name:", obj.firstName);
-        console.log("last name:", obj.lastName);
-        console.log("Kannada Marks:", obj1["kannada marks"]);
+        console.log("first name:", obj1.firstName);
+        console.log("last name:", obj1.lastName);
+        console.log("kannada marks:", obj1["kannada marks"]);
+        obj1.isWalking();
+        console.log(obj1.marks1[2]);
+        console.log(obj1.isSleeping());
 
     </script>
 </body>
