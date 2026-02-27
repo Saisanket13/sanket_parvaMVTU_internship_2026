@@ -7,7 +7,7 @@ This repository documents the learning journey and web development projects comp
 ## 📸 Project Preview
 
 ### Coffee Website
-![Coffee Homepage](coffee/images/coffee-hero-section.png)
+![Coffee Homepage](media/coffeefrontimage.png)
 
 *A responsive landing page project featuring custom styling and interactive components.*
 
