@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>setInterval vs setTimeout</h3>
+    <p>setTimeout is used to execute a function after a specified delay, while setInterval is used to execute a function repeatedly at specified intervals.</p>
+    <script>
+
+        console.log("First");
+        setTimeout(() => {
+            console.log("This is setTimeout");
+        }, 2000);
+        console.log("Second");
+        setInterval(() => {
+            console.log("This is setInterval");
+            console.log("Hi");
+        }, 3000);
+        console.log("Third");
+    </script>
+</body>
+</html>

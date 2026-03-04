@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form events - input, blur, change,focus, submit -->
+     <form id="contact-form" >
+        <label for="name" >Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter name">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter email">
+        <br>
+        <label >Gender: </label> <br>
+        <label for="male">Male:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Female:</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <br>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="bengaluru">Bengaluru</option>
+            <option value="mumbai">Mumbai</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const email = document.querySelector("#email");
+        email.addEventListener("blur", (event) => {
+            console.log("blur event trigger value is: ", event.target.value);
+        });
+
+        //change
+        const city = document.getElementById("city");
+        city.addEventListener("change", (e) => {
+            console.log("city value changes: ",e.target.value);
+        });
+
+        // focus
+        const name = document.getElementById("name");
+        name.addEventListener("focus", (e) => {
+            console.log("focus event triggered on name field");
+        });
+
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", (e) => {
+            // page reload nahi hoga
+            e.preventDefault();
+            console.log("form submitted");
+        });
+
+    </script>
+</body>
+</html>

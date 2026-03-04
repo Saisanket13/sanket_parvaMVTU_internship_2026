@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous JavaScript</title>
+</head>
+<body>
+    <h1>Asynchronous JavaScript</h1>
+    <p>By default JavaScript is synchronous and blocking.</p>
+    <p>It means that each line of code is executed one by one and the next line will not be executed until the previous line is completed.</p>
+
+<p>Asynchronos is used in api calls,db queries ,file handling and more</p>
+
+<p>1.setTimeout</p>
+<p>2.setInterval</p>
+<p>3.Promises</p>
+<p>4.fetch api</p>
+
+    <script>
+        // synchonous code example
+        console.log("This is synchronous JavaScript execution.");
+        console.log("Second");
+        console.log("Third");
+        console.log("Fourth");
+        console.log("Fifth");
+
+
+// synchorous code example with setTimeout
+console.log("1");
+console.log("2");
+
+setTimeout(() => {
+    console.log("This is asynchronous JavaScript execution.");
+}, 2000);
+console.log("3");
+console.log("4");
+
+
+    </script>
+
+</body>
+</html>

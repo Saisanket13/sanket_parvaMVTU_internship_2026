@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Callback functions</h1>
+    <p>A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed.</p>
+    <p>Callbacks are used to handle asynchronous operations in JavaScript, such as API calls, event handling, and more.</p>
+    <p>Callback hell - to overcome we use Promises and Async/Await</p>
+
+    <script>
+
+        const fun1=(ddd)=>{
+            console.log("First Function");
+            ddd()
+        }
+
+        const fun2=()=>{
+            setTimeout(() => {
+            console.log("Second Function");
+        }, 2000);
+        }
+        fun1(fun2);
+// callback hell example
+        setTimeout(() => {
+            console.log("1");
+                setTimeout(() => {
+                console.log("12");
+                    setTimeout(() => {
+                    console.log("123");
+                    setTimeout(() => {
+                    console.log("1234");
+                        setTimeout(() => {
+                        console.log("12345");
+                            setTimeout(() => {
+                            console.log("123456");
+                        },1000)
+                    },1000)
+                },1000)
+            },1000)
+        },1000)
+    },1000)
+    </script>
+</body>
+</html>
