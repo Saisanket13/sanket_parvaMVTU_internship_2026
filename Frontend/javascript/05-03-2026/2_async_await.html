@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    <h2>Async and Await</h2>
+    <p>Async and await are keywords in JavaScript that make working with promises easier.</p>
+
+    <script>
+
+         const fun4=(message,time)=>{
+            return new Promise((resolve ,reject)=>{
+                setTimeout(() => {
+                    resolve(message);
+                }, time);
+            })
+        }
+
+    const getdata=async()=>{
+       try{
+        const data1=await fun4("HI",1000);
+        console.log(data1);
+        const data2=await fun4("Hello",1000);
+        console.log(data2);
+       }catch(err){
+        console.log("error is:",err);
+       }
+    }
+    getdata();
+    </script>
+</body>
+</html>

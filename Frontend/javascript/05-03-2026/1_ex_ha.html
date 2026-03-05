@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <h2>Exception Handling in JavaScript</h2>
+    <p>Exception handling is a mechanism to handle runtime errors in a controlled manner. It allows developers to write code that can gracefully handle errors without crashing the entire application.</p>
+    <p>In JavaScript, we can use try-catch blocks to handle exceptions.</p>
+    <pre>
+        try {
+            // code that may throw an error
+        } catch (error) {
+            // code to handle the error
+        } finally {
+            // code that will always execute, regardless of whether an error occurred or not
+        }
+    </pre>
+
+    <script>
+    console.log(10 / 2);  // 5
+
+    try {
+        if (!isFinite(10 / 0)) {
+            throw new Error("Cannot divide by zero");
+        }
+    } catch (err) {
+        console.log("An error occurred: ", err.message);
+    }finally{
+        console.log("Closing Resources");
+    }
+
+    try {
+        const obj = { name: "sanket" };
+        if (obj.age === undefined) {
+            throw new Error("Property 'age' does not exist on obj");
+        }
+        console.log(obj.age);
+    } catch (err) {
+        console.log("An error occurred: ", err.message);
+    }
+
+    console.log("2");
+    console.log("3");
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+
+<h1>Fetch API</h1>
+<p>Fetch API is used to make HTTP requests to a server.</p>
+
+<div id="container"></div>
+
+<script>
+let url = "https://jsonplaceholder.typicode.com/posts"
+
+const fetchData = async () => {
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const container = document.getElementById("container");
+
+        data.forEach(element => {
+
+            const h1 = document.createElement("h1");
+            h1.textContent = element.userId;
+
+            const h2 = document.createElement("h2");
+            h2.textContent = element.id;
+
+            const p = document.createElement("p");
+            p.textContent = element.title;
+
+            const body = document.createElement("p");
+            body.textContent = element.body;
+
+            const hr = document.createElement("hr");
+
+            const parent = document.createElement("div");
+
+            parent.appendChild(h1);
+            parent.appendChild(h2);
+            parent.appendChild(p);
+            parent.appendChild(body);
+            parent.appendChild(hr);
+
+            container.appendChild(parent);
+        });
+
+    } catch(err){
+        console.log("error is:", err);
+    }
+}
+
+fetchData();
+</script>
+
+</body>
+</html>
