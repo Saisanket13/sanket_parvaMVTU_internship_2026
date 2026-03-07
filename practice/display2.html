@@ -58,7 +58,9 @@ const changeMessageBtn = document.getElementById("changeMessageBtn");
    EVENT LISTENERS
 --------------------------------*/
 
-innerTextBtn.addEventListener("click", showInnerText);
+innerTextBtn.addEventListener("click", ()=> {
+    container.innerText = "<h1>This is InnerText</h1>";
+});
 
 innerHTMLBtn.addEventListener("click", showInnerHTML);
 

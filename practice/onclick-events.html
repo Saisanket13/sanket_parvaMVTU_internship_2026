@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Text</title>
+</head>
+
+<body>
+
+<p id="hello">Hello World</p>
+
+<button onclick="document.getElementById('hello').innerText='JavaScript is very interesting'">Change Text</button>
+
+<div id="box">
+
+</div>
+<button id="btn1">Plain Text</button>
+<button id="btn2">Rich Text</button>
+
+<p id="sta13">Waiting in the home page </p>
+<button id="too">TASK3</button>
+
+<div id="three">
+    <p>Three Colour</p>
+</div>
+
+<button id="red">Red</button>
+<button id="blue">Blue</button>
+<button id="reset">Reset Button</button>
+
+<div id="notebox">
+</div>
+
+<button id="addnote">Add Note</button>
+<button id="change">Change Color</button>
+<button id="clear">Clear</button>
+
+<button onclick="alert('I used onclick!')">onclick Button</button>
+<button id="task5btn">addEventListener Button</button>
+
+<script>
+    const box = document.getElementById("box");
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const sta13 = document.getElementById("sta13");
+const too = document.getElementById("too");
+const three = document.getElementById("three");
+const red = document.getElementById("red");
+const blue = document.getElementById("blue");
+const reset = document.getElementById("reset");
+const addnote = document.getElementById("addnote");
+const change = document.getElementById("change");
+const clear = document.getElementById("clear");
+const notebox = document.getElementById("notebox");
+
+btn1.addEventListener("click", function(e){
+    box.innerText = "<h2>HELLO WORLD</h2>";
+});
+
+btn2.addEventListener("click", function(e){
+    box.innerHTML = "<h2>HELLO WORLD</h2>";
+});
+
+too.addEventListener("click", function(e){
+    sta13.innerText = "Button is clicked";
+});
+too.addEventListener("mouseover", function(e){
+    sta13.innerText = "Button is Hovering";
+});
+too.addEventListener("mouseout", function(e){
+    sta13.innerText = "Mouse out";
+});
+
+red.addEventListener("click",(e)=>{
+   three.style.color="red"
+})
+blue.addEventListener("click",(e)=>{
+    three.style.color="blue"
+})
+reset.addEventListener("click",(e)=>{
+    three.style.color=""
+})
+addnote.addEventListener("click",(e)=>{
+    notebox.innerHTML+="<p>New note added!</p>"
+})
+change.addEventListener("click",(e)=>{
+    notebox.style.backgroundColor="yellow"
+})
+clear.addEventListener("click",(e)=>{
+    notebox.innerHTML=""
+})
+const task5btn = document.getElementById("task5btn");
+  task5btn.addEventListener("click", () => alert("I used addEventListener!"));
+  task5btn.addEventListener("click", () => alert("I can run a second action too!"));
+  // Notice: onclick can't do this — second one would overwrite the first
+</script>
+</body>
+</html>
